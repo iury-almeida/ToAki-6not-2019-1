@@ -12,6 +12,12 @@
     <p mat-line>{{dist * 1000}} m</p>
     <p mat-line *ngIf="dist <= 0.075">
       <strong>Parece que você está na Fatec Franca</strong>
+      <br/>
+      Obrigado pela confirmação. Clique no botão abaixo para efetuar a leitura do QRCODE e garantir seu certificado da palestra
+      <br>
+      <button mat-raised-button color="primary" [routerLink]="['/qrcode']">
+        QRCODE
+      </button>
     </p>
     <p mat-line *ngIf="dist > 0.075">
       <strong>OPA! VOCÊ NÃO ESTÁ NA FATEC FRANCA!</strong>
