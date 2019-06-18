@@ -1,0 +1,33 @@
+<app-main-nav></app-main-nav>
+
+<mat-card>
+
+  <mat-list role="list" *ngFor="let evento of eventos">
+    <mat-list-item role="listitem"> {{ evento.codigoEvento }} </mat-list-item>
+    <mat-list-item role="listitem"> {{ evento.nomeEvento }} </mat-list-item>
+  </mat-list>
+
+  <mat-accordion *ngFor="let oficina of oficinas">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ oficina.codigoOficina }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ oficina.nomeOficina }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-list role="list">
+        <mat-list-item role="listitem"> Local: {{ oficina.local }} </mat-list-item>
+        <mat-list-item role="listitem"> Instrutor: {{ oficina.nomeInstrutor }} </mat-list-item>
+        <mat-list-item role="listitem"> Inicio: {{ oficina.dataInicio | date: 'dd/MM/yyyy HH:mm' }} </mat-list-item>
+        <mat-list-item role="listitem"> Término: {{ oficina.dataTermino | date: 'dd/MM/yyyy HH:mm' }} </mat-list-item>
+        <mat-list-item role="listitem"> Registrar presença: {{ oficina.intervaloAntes }} </mat-list-item>
+        <mat-list-item role="listitem"> Registrar presença: {{ oficina.intervaloApos }} </mat-list-item>
+      </mat-list>
+  
+    </mat-expansion-panel>  
+  </mat-accordion>
+
+</mat-card>

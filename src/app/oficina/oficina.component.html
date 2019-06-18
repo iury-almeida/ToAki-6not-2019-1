@@ -1,0 +1,12 @@
+<app-main-nav></app-main-nav>
+
+<mat-list role="list" *ngFor="let item of oficina">
+    <mat-list-item role="listitem"> Codigo: {{ item.codigoOficina }} </mat-list-item>
+    <mat-list-item role="listitem"> Oficina: {{ item.nomeOficina }}   </mat-list-item>
+    <mat-list-item role="listitem"> Local: {{ item.local }}         </mat-list-item>
+    <mat-list-item role="listitem"> Instrutor: {{ item.nomeInstrutor }}     </mat-list-item>
+    <mat-list-item role="listitem"> Data Inicio: {{ item.dataInicio | date: 'dd/MM/yyyy HH:mm' }} </mat-list-item>
+    <mat-list-item role="listitem"> Data Termino: {{ item.dataTermino | date: 'dd/MM/yyyy HH:mm' }} </mat-list-item>
+    <mat-list-item role="listitem"> Registro Antes: {{ item.intervaloAntes }}</mat-list-item>
+    <mat-list-item role="listitem"> Registro Apos: {{ item.intervaloApos }} </mat-list-item>
+</mat-list>

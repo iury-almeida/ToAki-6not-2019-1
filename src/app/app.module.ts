@@ -8,25 +8,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from  './material/material.module';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { HomeComponent } from './home/home.component';
+import { QrCodeComponent } from './qr-code/qr-code.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { EventosComponent } from './eventos/eventos.component';
+import { OficinaComponent } from './oficina/oficina.component';
+// import { EventoService } from './services/evento.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    MainNavComponent,
+    HomeComponent,
+    QrCodeComponent,
+    EventosComponent,
+    OficinaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    ZXingScannerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
