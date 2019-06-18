@@ -1,1 +1,18 @@
+<<<<<<< HEAD
+=======
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  
+  <mat-menu #rootMenu="matMenu">
+    <button mat-menu-item [routerLink]="['geoloc']">Check-in</button>
+    <button mat-menu-item [routerLink]="['qrcode']">QRCODE</button>
+  </mat-menu>
+  
+    <h1>Welcome to **Fatec ToAki**</h1>
+  
+</mat-toolbar>
+
+>>>>>>> f7fcb8549f3dc66a8c63550e91fdbc20a44b3a3b
 <router-outlet></router-outlet>
