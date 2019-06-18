@@ -19,8 +19,8 @@ export class EventoService {
           "nomeOficina": "Workshop sobre Angular",
           "local": "Fatec Franca - Saguão",
           "nomeInstrutor":"Prof. Fausto",
-          "dataInicio": "2019-06-18 19:20",
-          "dataTermino": "2019-05-12 19:20",
+          "dataInicio": "2019-06-18 19:50",
+          "dataTermino": "2019-06-18 20:20",
           "intervaloAntes": 15,
           "intervaloApos": 15
         },
@@ -29,16 +29,15 @@ export class EventoService {
           "nomeOficina": "Workshop sobre Ionic",
           "local":"Fatec Franca - Laboratorio 3",
           "nomeInstrutor":"Prof. Fausto",
-          "dataInicio": "2020-05-13 20:30",
-          "dataTermino": "2020-05-13 21:30",
+          "dataInicio": "2020-06-19 20:30",
+          "dataTermino": "2020-06-19 21:30",
           "intervaloAntes": 15,
           "intervaloApos": 15
         }
       ]
     }
   ]
-    array: any;
-
+  
   constructor() { }
 
   listarEventos() {

@@ -47,28 +47,12 @@ export class OficinaComponent implements OnInit {
     let prazoInicioRegistro = new Date(intervaloAntes);
     let prazoFinalRegistro = new Date(intervaloApos);
 
-    console.log(agora);
-    console.log(prazoInicioRegistro);
-    console.log(prazoFinalRegistro);
-
-    if ((agora < prazoInicioRegistro) || (agora > prazoFinalRegistro)) {
-      console.log("Fora do horario");
+    if ((agora <= prazoInicioRegistro) || (agora >= prazoFinalRegistro)) {
       this.snackBar.open("Leitura realizada fora do prazo", '', {duration: 8000});
-      return;
     }
-
-    console.log("Dentro do horario");
-    this.snackBar.open("Leitura realizada dentro do prazo", '', {duration: 8000});
+    else {
+      this.snackBar.open("Leitura realizada dentro do prazo", '', {duration: 8000});
+    }
   }
 
 }
-
-// let data = new Date();
-    
-// let dia     = data.getDate();
-// let mes     = data.getMonth();
-// let ano     = data.getFullYear();
-// let hora    = data.getHours();
-// let minutos = data.getMinutes();
-
-// console.log(`${dia}-${mes}-${ano} ${hora}:${minutos}`);

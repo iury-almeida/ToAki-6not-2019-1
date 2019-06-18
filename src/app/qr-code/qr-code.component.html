@@ -6,7 +6,7 @@
     <mat-form-field>
       <mat-label>Selecione a câmera</mat-label>
       <select matNativeControl (change)="onDeviceSelectChange($event.target.value)">
-        <option value="" [selected]="!currentDevice">(Nenhuma câmera selecionada)</option>
+        <option value="" [selected]="!currentDevice">Abrir camera</option>
         <option *ngFor="let device of availableDevices" [value]="device.deviceId" [selected]="currentDevice && device.deviceId === currentDevice.deviceId">{{device.label}}</option>
       </select>
     </mat-form-field>

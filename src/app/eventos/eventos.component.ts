@@ -26,7 +26,6 @@ export class EventosComponent implements OnInit {
       let event = this.eventoSrv.listarEventos();
       this.eventos.push(event);
       this.oficinas = event.oficinas
-      console.log(event.oficinas)
 
     }
     catch (e) {
